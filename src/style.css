@@ -1,10 +1,21 @@
 * {
     margin: 0;
     padding: 0;
+    font-size: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
 }
 
 .container {
-    width: 1600px;
+    width: 100%;
 }
 
 a {
@@ -16,28 +27,69 @@ li {
 }
 
 .sectionMainPromo {
-    width: 1600px;  /*1600px*/
-    max-width: 100%;
+    width: 100%; 
     height: 876px;
     background-color: #47d7d7;
     background-image: url("img/GirlImage1.png");
     background-repeat: no-repeat;
     background-position: 73%;
+    position: static;
 }
+
+.sectionMainPromo2 {
+    width: 100%; 
+    height: 876px;
+    background-color: #dd519f;
+    background-image: url("img/GirlImage2.png");
+    background-repeat: no-repeat;
+    background-position: 73%;
+    position: static;
+}
+
+.sectionMainPromo3 {
+    width: 100%; 
+    height: 876px;
+    background-color: #47d7d7;
+    background-image: url("img/GirlImage3.png");
+    background-repeat: no-repeat;
+    background-position: 73%;
+    position: static;
+}
+
+.owl-dots {
+    position: static;
+    display: none;
+}
+
+
+
+
+
+
 
 /* Change nav menu style */
 
 .menu {
     width: 77.5%;
-    /*width: 1240px;  /* 1240px*/
     height: 93px;
     box-shadow: 0px 1px 4px rgba(0,0,0,0.22);
     background-color: #ffffff;
     margin: 0 auto;
-    position: fixed;
     top: 4%;  /* 36px*/
     left: 11%; /*180px*/
+    z-index: 999;
+    position: absolute;
 }
+
+.menu.sticky {
+    /* border-bottom: 1px solid #dadada; */
+    /* width: 100%; */
+    width: 100%;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 999;
+  }
 
 .menuLogo {
     width: 14%;
@@ -50,7 +102,7 @@ li {
 .menuItemsLink {
     display: inline-block;
     float: left;
-    font-size: 0.813em;
+    font-size: 0.813rem;
     line-height: 36px;;
     color: rgb(150,149,150);
     font-family: "Open Sans";
@@ -64,7 +116,7 @@ li {
 }
 
 .menuItemsLink:hover {
-    font-size: 0.813em;
+    font-size: 0.813rem;
     line-height: 36px;
     color: rgb(246,158,0);
     font-family: "Open Sans";
@@ -73,7 +125,7 @@ li {
 }
 
 .menuItemsPhone {
-    font-size: 1.44em;
+    font-size: 1.44rem;
     line-height: 36px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
@@ -84,64 +136,87 @@ li {
 
 /* Change main promo screen style */
 
+.mainPromo {
+    position: absolute;
+    z-index: 900;
+}
+
 .mainPromoTitle {
-    margin: 278px 0 0 13%;
+    margin: 278px 0 0 215px;
     display: inline-block;
     clear: both;
-    font-size: 7.75em;
+    font-size: 7.75rem;
     line-height: 92px;
     color: rgb(255,255,255);
     font-family: "Open Sans";
     font-weight: 900;
     text-transform: uppercase;
+    position: absolute;
+    z-index: 900;
 }
 
 .mainPromoTitle p {
-    font-size: 100px;
+    font-size: 6.25rem;
+    width: 500px;
     font-weight: 900;
+    position: absolute;
+    z-index: 900;
 }
 
 .mainPromoText {
     width: 577px;
-    font-size: 1.75em;
+    font-size: 1.75rem;
     color: rgb(255,255,255);
     font-family: "Open Sans";
     font-weight: bold;
     display: block;
-    margin: 60px 0 0 13%;
+    margin: 525px 0 0 215px;
+    position: absolute;
+    z-index: 900;
 }
 
 .mainPromoButton {
-    margin: 50px 0 0 13%;
+    margin: 595px 0 0 215px;
     width: 380px;
     height: 87px;
     border-radius: 38px;
     box-shadow: 0px 5px 0px #288624;
-    background-image: linear-gradient(180deg, #55dd49 0%, #3da139 100%);
-    border: 1px solid;    
+    background-color: #4db747;
     text-decoration: none;
-    display: block;
-}
+    text-transform: uppercase;
 
-.mainPromoButton span {
-    font-size: 2.13em;
+    font-size: 1.5rem;
     line-height: 0px;
     color: rgb(255,255,255);
     font-family: "Open Sans";
     font-weight: 800;
-    text-transform: uppercase;
-    margin: 40px 0 0 26%;
     display: inline-block;
+    position: absolute;
+}
+
+.mainPromoButton:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.mainPromoButton:active {
+    box-shadow: none;
+    background-image: linear-gradient(180deg, #55dd49 0%, #3da139 100%);
+    border: 1px solid ;
 }
 
 .arrowDown {
-    margin: 110px 0 0 47%;
+    margin: 800px 0 0 47%;
     display: inline-block;
     float: left;
+    position: absolute;
+    z-index: 900;
 }
 
 .social {
-    margin: 110px 0 0 78.5%;
+    margin: 800px 0 0 78.5%;
+    position: absolute;
+    z-index: 900;
 }
 
 .socialVk {
@@ -196,20 +271,19 @@ li {
     height: 1450px;
     background-repeat: no-repeat;
     background-position: 40% 17%;
-    max-width: 1600px;
+    max-width: 100%;  /*1600*/
 }
 
 .descriptionTitle {
     text-transform: uppercase;
-    font-size: 1.75em;
+    font-size: 1.75rem;
     line-height: 36px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
     font-weight: bold;
-    /* text-align: center; */
     margin: 136px 0 0 33%;
     display: block;
-    max-width: 1600px;
+    max-width: 100%; /*1600*/
 }
 
 .descriptionTitle::before,
@@ -241,7 +315,7 @@ li {
 }
 
 .itemDescr1Title {
-    font-size: 1.375em;
+    font-size: 1.375rem;
     line-height: 18px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
@@ -253,7 +327,7 @@ li {
 
 .itemDescr1Text {
     width: 269px;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 24px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
@@ -262,7 +336,7 @@ li {
 
 .itemDescr1SubText {
     width: 269px;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 20px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
@@ -274,7 +348,7 @@ li {
 }
 
 .itemDescr2Title {
-    font-size: 1.375em;
+    font-size: 1.375rem;
     line-height: 18px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
@@ -286,7 +360,7 @@ li {
 
 .itemDescr2Text {
     width: 269px;
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 24px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
@@ -304,7 +378,7 @@ li {
 }
 
 .itemDescr3Title {
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 18px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
@@ -314,7 +388,7 @@ li {
 
 .itemDescr3Text {
     width: 269px;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 24px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
@@ -336,7 +410,7 @@ li {
 
 .itemDescr4Text {
     width: 269px;
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 24px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
@@ -347,11 +421,11 @@ li {
 /* Change section promo style */
 
 .sectionPromo {
-    max-width: 1600px;
+    max-width: 100%; /*1600*/
 }
 
 .sectionPromoTitle p {
-    font-size: 57px;
+    font-size: 3.563rem;
     line-height: 43px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
@@ -362,7 +436,7 @@ li {
 }
 
 .sectionPromoTitle span {
-    font-size: 34px;
+    font-size: 2.125rem;
     line-height: 43px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
@@ -374,7 +448,6 @@ li {
 .promoImgBlock {
     margin: 50px 0 0 21%;
     vertical-align: middle;
-    /* margin-bottom: 120px; */
 }
 
 .promoImgBlock img {
@@ -396,7 +469,7 @@ li {
 .promoImgTitleBlock p {
     float: left;
     margin: 0 100px 0 0;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: rgb(33,33,33);
     font-family: "Open Sans";
     font-weight: bold;
@@ -409,7 +482,7 @@ li {
 /* Change carousel block style */
 
 .sectionCarousel {
-    width: 1600px;
+    width: 100%; /*1600*/
     height: 1150px;
     background-color: #f9f9f9;
 }
@@ -417,7 +490,7 @@ li {
 .sectionCarouselTitle {
     text-transform: uppercase;
     padding-top: 100px;
-    font-size: 57px;
+    font-size: 3.563rem;
     line-height: 36px;
     color: rgb(40,37,40);
     font-family: "Open Sans";
@@ -432,7 +505,7 @@ li {
 
 .sectionCarouselBlock {
     margin: 75px auto;
-    width: 969px;
+    width: 61%;
     height: 253px;
 }
 
@@ -558,10 +631,20 @@ li {
 
 .prev {
     margin-left: -7.18%;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-image: url("img/carousel/backArrow.png");
+    background-repeat: no-repeat;
 }
 
 .next {
-    margin-left: 64em;
+    margin-left: 65%;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-image: url("img/carousel/forwardArrow.png");
+    background-repeat: no-repeat;
 }
 
 .prev:hover, .next:hover {
@@ -572,9 +655,82 @@ li {
 /* Change video section style */
 
 .sectionVideo {
-    width: 1600px;
+    width: 100%; /*1600*/
     height: 761px;
     background-color: #f7e513;
+}
+
+/* Change footer block style */
+
+.footer {
+    bottom: 0px;
+    height: 340px;
+}
+
+.footerLogo {
+    display: block;
+    margin: 100px 0 0 13.5%;
+}
+
+.footerDescriptionText {
+    margin: 40px 0 0 13.5%;
+}
+
+.footerDescription {
+    display: inline-block;
+    float: left;
+}
+
+.footerRights {
+    text-align: center;
+    margin: 200px 0 0 25%;
+    display: inline-block;
+    float: left;
+}
+
+.footerSocial {
+    margin: 180px 0 0 13.5%;
+    display: inline-block;
+}
+
+.footerSocial:hover {
+    cursor: pointer;
+}
+
+.footerVk {
+    background-image: url("img/footerVk.png");
+    width: 65px;
+    height: 65px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.footerYoutube {
+    background-image: url("img/footerYoutube.png");
+    width: 65px;
+    height: 65px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.footerInstagram {
+    background-image: url("img/footerInstagram.png");
+    width: 65px;
+    height: 65px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.footerVk:active {
+    background-image: url("img/footerVkAct.png");
+}
+
+.footerYoutube:active {
+    background-image: url("img/footerYoutubeAct.png");
+}
+
+.footerInstagram:active {
+    background-image: url("img/footerInstagramAct.png");
 }
 
 
@@ -591,10 +747,270 @@ li {
 
 /* Change style for any devices */
 
-@media (max-width: 600px) {
+@media (max-width: 1440px) {
+
+    .menuItemsLink {
+        font-size: 90%;
+    }
+
+    .menuItemsPhone {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+    * {
+        font-size: 80%;
+    }
+
+    .menuItemsLink, .menuItemsPhone {
+        font-size: 0.85rem;
+    }
+
+    .sectionDescription {
+        background-image: url("img/descriptionImage.png");
+        height: 1250px;
+        background-position: 30% 12%;
+        background-size: 50%;
+        max-width: 100%;  /*1600*/
+    }
+
+    .descriptionTitle {
+        margin: 100px 0 0 33%;
+    }
+
+    .DescriptionItems {
+        margin-top: 100px;
+    }
+
+    .itemDescr {
+        margin-left: 5%;
+    }
+    
+    .itemDescr1Title {
+        margin: 0 0 25px 5%;
+    }
+
+    .leftDescriptionLi {
+        margin-left: 7%;
+        float: left;
+        display: inline-block;
+    }
+
+    .leftDescriptionLi li {
+        width: 80%;
+    }
+    
+    /* Change right column list of  description section */
+    
+    .rightDescriptionLi {
+        margin-left: 7.5%;
+    }
+
+    .rightDescriptionLi li {
+        width: 90%;
+    }
+    
+    .itemDescr4Text {
+        width: 100%;
+    }
+
+    .promoImgBlock {
+        margin-left: 10%;
+    }
+
+    .promoImgTitleBlock {
+        margin: 30px 0 0 13%;
+    }
+    
+    .promoImgTitleBlock p {
+        margin: 0 110px 0 0;
+    }
+
+    .promoImgTitleBlock p:nth-child(2), p:nth-child(3) {
+        margin-right: 170px;
+    }
+
+    .carouselPhotoRodrigues {
+        margin: 80px auto 0 auto;
+    }
+
+    .carouselPhotoAlena {
+        margin: 80px auto 0 auto;
+    }
+
+    .carouselPhotoSemenihin {
+        margin: 80px auto 0 auto;
+    }
+
+    .carouselPhotoCzu {
+        margin: 80px auto 0 auto;
+    }
+
+    .carouselName {
+        margin: 40px 0 34px 35%;
+    }
+    
+    .carouselName2 {
+        margin: 40px 0 34px 20%;
+    }
+    
+    .carouselName3 {
+        margin: 40px 0 34px 25%;
+    }
+    
+    .carouselName4 {
+        margin: 40px 0 34px 24%;
+    }
+}
+
+@media (max-width: 768px) {
+    * {
+        font-size: 70%;
+    }
+    
+    .menu {
+        display: none;
+    }
+
+    .sectionDescription {
+        background-image: url("img/descriptionImage.png");
+        height: 1600px;
+        background-position: 80% 12%;
+        background-size: 50%;
+        max-width: 100%;  /*1600*/
+    }
+
+    .descriptionTitle {
+        margin: 100px 0 0 33%;
+    }
+
+    .DescriptionItems {
+        margin-top: 100px;
+    }
+
+    .itemDescr {
+        margin-left: 5%;
+    }
+    
+    .itemDescr1Title {
+        margin: 0 0 25px 5%;
+    }
+
+    .leftDescriptionLi {
+        margin-left: 7%;
+    }
+
+    .leftDescriptionLi li {
+        width: 100%;
+    }
+    
+    /* Change right column list of  description section */
+    
+    .rightDescriptionLi {
+        margin: 54px 0 0 7%;
+    }
+
+    .rightDescriptionLi li {
+        width: 100%;
+    }
+    
+    .itemDescr4Text {
+        width: 100%;
+        clear: both;
+    }
+
+    .promoImgBlock {
+        margin-left: 10%;
+    }
+
+    #promoImg {
+        width: 80px;
+    }
+
+    .arrow {
+        margin-bottom: 45px;
+    }
+
+    .promoImgTitleBlock {
+        margin: 30px 0 0 10%;
+    }
+    
+    .promoImgTitleBlock p {
+        margin: 0 80px 0 0;
+    }
+
+    .promoImgTitleBlock p:nth-child(2), p:nth-child(3) {
+        margin-right: 105px;
+    }
+
+    .carouselPhotoRodrigues {
+        margin: 80px auto 0 auto;
+    }
+
+    .carouselPhotoAlena {
+        margin: 80px auto 0 auto;
+    }
+
+    .carouselPhotoSemenihin {
+        margin: 80px auto 0 auto;
+    }
+
+    .carouselPhotoCzu {
+        margin: 80px auto 0 auto;
+    }
+
+    .carouselName {
+        margin: 40px 0 34px 30%;
+    }
+    
+    .carouselName2 {
+        margin: 40px 0 34px 12%;
+    }
+    
+    .carouselName3 {
+        margin: 40px 0 34px 15%;
+    }
+    
+    .carouselName4 {
+        margin: 40px 0 34px 15%;
+    }
+
+    .prev, .next {
+        margin-top: 80px;
+    }
+    
+    .prev {
+        margin-left: -12%;
+    }
+    
+    .next {
+        margin-left: 65%;
+    }
+
+    .sectionCarousel {
+        height: 1000px;
+    }
+
+    .footerRights {
+        margin: 0 0 0 45%;
+        clear: both;
+    }
+    
+    .footerSocial {
+        margin: 180px 0 0 10%;
+        clear: both;
+    }
+}
+
+@media (max-width: 425px) {
     .menu {
         display: none;
     }
 }
 
-
+@media (max-width: 375px) {
+    .menu {
+        display: none;
+    }
+}
