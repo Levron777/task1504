@@ -1,3 +1,5 @@
+// Create smooth scrolling through menu sections
+
 $(document).ready( function() {
     $(function(){
         $('a[href^="#"]').on('click', function(event) {
@@ -9,14 +11,14 @@ $(document).ready( function() {
         });
     });
 
-    // Get changes of buttons name on click
+    // Change button names when pressed
 
     $('.mainPromoButton').click(function(){
         $(this).text('похудеть за неделю!');
         $(this).style('font-size:1rem');
     });
 
-    // Get auto changes slides on main screen
+    // Get auto changes slides on main screen (use owl-carousel (JQuery) plugin)
 
     $(document).ready(function(){
         $(".owl-carousel").owlCarousel({
@@ -26,7 +28,7 @@ $(document).ready( function() {
         });
     });
 
-    // Auto scrollsown navbar 
+    // Create animation of sticking menu
 
     $(window).scroll(function() {
         if ($(this).scrollTop() > 20){
@@ -37,6 +39,7 @@ $(document).ready( function() {
     });
 });  
 
+// Create simple slider on native JS
     
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -46,7 +49,7 @@ function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
+// Thumbnails image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
